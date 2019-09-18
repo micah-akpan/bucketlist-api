@@ -1,0 +1,11 @@
+import http from 'http';
+import app from '../app';
+
+const server = http.createServer(app);
+const PORT = parseInt(process.env.PORT, 10) || 2020;
+
+app.set('port', PORT);
+
+server.listen(PORT, () => {
+  console.info(`Server started listening to connections on http://localhost:${PORT}`);
+});
