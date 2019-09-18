@@ -1,0 +1,20 @@
+{
+  "name": "bucket-list-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/micah-akpan/bucket-list-api.git",
+  "author": "Micah Akpan <mickey4sure2k7@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "start": "tsc",
+    "start:watch": "babel src --watch --out-dir dist --extensions '.ts,.tsx'",
+    "build": "babel src --out-dir dist --extensions '.ts,.tsx'"
+  }
+}
