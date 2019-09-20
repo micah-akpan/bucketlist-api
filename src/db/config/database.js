@@ -1,4 +1,7 @@
-import { config } from 'dotenv';
+require('@babel/register');
+
+// eslint-disable-next-line import/first
+const { config } = require('dotenv');
 
 config();
 
@@ -9,7 +12,7 @@ const {
   DB_TEST
 } = process.env;
 
-export default {
+module.exports = {
   development: {
     username: DB_USER,
     password: DB_PASSWORD,
