@@ -27,13 +27,13 @@ export default {
       allowNull: false,
       type: Sequelize.DATE,
       field: 'date_created',
-      defaultValue: new Date()
+      defaultValue: Sequelize.NOW
     },
     dateModified: {
       allowNull: false,
       type: Sequelize.DATE,
       field: 'date_modified',
-      defaultValue: new Date()
+      defaultValue: Sequelize.NOW
     }
   }),
   down: (queryInterface) => queryInterface.dropTable('BucketItems')

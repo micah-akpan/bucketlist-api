@@ -1,5 +1,5 @@
 import supertest, { SuperTest, Test } from 'supertest';
-import app from '../app';
+import app from '../../app';
 
 describe('Index Route', () => {
   let request: SuperTest<Test>;

@@ -8,7 +8,9 @@ export default (sequelize, DataTypes) => {
     done: {
       type: DataTypes.BOOLEAN
     }
-  }, {});
+  }, {
+    timestamps: false
+  });
   BucketItem.associate = (models) => {
     BucketItem.belongsTo(models.Bucketlist, {
       foreignKey: 'id',

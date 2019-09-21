@@ -6,6 +6,7 @@ module.exports = {
     '!**/vendor/**',
     '!dist/**',
     '!coverage/**',
-    '!jest.config.js'
+    '!jest.config.js',
+    '!src/db/**'
   ]
 };

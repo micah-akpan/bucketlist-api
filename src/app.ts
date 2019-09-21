@@ -6,8 +6,8 @@ import routes from './routes';
 const app = express();
 app.set('json spaces', 2);
 
-helmet();
-logger('dev');
+app.use(logger('dev'));
+app.use(helmet());
 
 routes(app);
 
