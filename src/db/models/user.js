@@ -20,7 +20,9 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     }
-  }, {});
+  }, {
+    timestamps: false
+  });
   User.associate = (models) => {
     User.hasMany(models.Bucketlist, {
       foreignKey: 'id',

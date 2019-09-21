@@ -10,7 +10,9 @@ export default (sequelize, DataTypes) => {
       allowNull: false,
       field: 'created_by'
     }
-  }, {});
+  }, {
+    timestamps: false
+  });
   Bucketlist.associate = (models) => {
     Bucketlist.belongsTo(models.User, {
       foreignKey: 'id',

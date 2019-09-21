@@ -1,6 +1,8 @@
 import { Express } from 'express';
-import HomeController from '../controllers/HomeController';
+import HomeRouter from './root/root';
+import bucketlistRouter from './bucketlist/bucketlist';
 
 export default (app: Express) => {
-  app.use('/', HomeController.greetAPIClient);
-};
+  app.use('/api/v1/', bucketlistRouter);
+  app.use('/', HomeRouter);
+}
