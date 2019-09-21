@@ -10,6 +10,15 @@ class BucketlistController {
       return res.json({ status: 500, message: 'Something went wrong' });
     }
   }
+
+  static async fetchABucketlist(req, res) {
+    try {
+      const bucketlist = await BucketlistService.getABucketlist(req.params.id);
+      return res.json({ status: 200, data: [bucketlist] });
+    } catch (e) {
+      return res.json({ status: 500, message: 'Something went wrong' });
+    }
+  }
 }
 
 export default BucketlistController;
